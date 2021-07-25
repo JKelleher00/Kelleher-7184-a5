@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+
+<AnchorPane prefHeight="696.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.TableViewer">
+   <children>
+      <TextField fx:id="ValueBox" layoutX="112.0" layoutY="112.0" promptText="Item Value" />
+      <TextField fx:id="SerialBox" layoutX="288.0" layoutY="112.0" promptText="Serial Number" />
+      <TextField fx:id="NameBox" layoutX="468.0" layoutY="112.0" promptText="Item Name" />
+      <Button fx:id="AddButton" layoutX="650.0" layoutY="112.0" mnemonicParsing="false" onAction="#OnAddClicked" text="Add" />
+      <Label fx:id="ErrorMessage" alignment="CENTER" layoutX="76.0" layoutY="169.0" prefHeight="172.0" prefWidth="636.0" text="Label" visible="false" wrapText="true" />
+      <Button layoutX="24.0" layoutY="635.0" mnemonicParsing="false" onAction="#onRemovePressed" text="Remove" />
+      <Button layoutX="112.0" layoutY="635.0" mnemonicParsing="false" onAction="#OnEditPressed" text="Edit" />
+      <Button fx:id="CommitButton" layoutX="712.0" layoutY="112.0" mnemonicParsing="false" onAction="#OnCommitPressed" text="Commit edit" visible="false" />
+      <Button layoutX="241.0" layoutY="36.0" mnemonicParsing="false" onAction="#OnSaveTxtPressed" text="Save as txt" />
+      <TextField fx:id="SaveTitle" layoutX="75.0" layoutY="36.0" promptText="Title" />
+      <Button layoutX="697.0" layoutY="36.0" mnemonicParsing="false" onAction="#OnLoadTxtPressed" text="Load txt" />
+      <TextField fx:id="LoadTitle" layoutX="531.0" layoutY="36.0" promptText="Title" />
+      <Button layoutX="327.0" layoutY="36.0" mnemonicParsing="false" onAction="#OnSaveHTMLPressed" text="Save as HTML" />
+      <TableView fx:id="Table" layoutX="24.0" layoutY="195.0" prefHeight="430.0" prefWidth="771.0">
+        <columns>
+          <TableColumn fx:id="ValueColumn" prefWidth="87.0" text="Value" />
+          <TableColumn fx:id="SerialColumn" minWidth="0.0" prefWidth="143.0" text="Serial" />
+            <TableColumn fx:id="NameColumn" minWidth="0.0" prefWidth="540.0" text="Name" />
+        </columns>
+      </TableView>
+      <SubScene fx:id="popup" height="696.0" layoutX="10.0" layoutY="10.0" visible="false" width="805.0">
+         <root>
+            <Region />
+         </root>
+      </SubScene>
+      <Button fx:id="CloseButton" layoutX="218.0" layoutY="585.0" mnemonicParsing="false" onAction="#OnClosePressed" prefHeight="100.0" prefWidth="309.0" text="Close" visible="false" />
+   </children>
+</AnchorPane>

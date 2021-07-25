@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class starter{
+    main()
+    start()
+}
+class TableViewer{
+    OnAddClicked()
+    error()
+    onClosePressed()
+    onRemovePressed()
+    onEditPressed()
+    onCommitPressed()
+    onSaveTxtPressed()
+    onLoadTxtPressed()
+    onSaveHTMLPressed()
+}
+class ItemObj{
+    getPrice()
+    getSerial()
+    getName()
+    setPrice()
+    setSerial()
+    SetName()
+}
+javafx.application <|-- starter
+starter <-- TableViewer
+ItemObj --> TableViewer
+@enduml
